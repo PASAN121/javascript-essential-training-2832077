@@ -8,11 +8,13 @@ const stuff = ["piggy", "headlamp", "pen", "pencil", "eraser", "water bottle"];
 const article = document.querySelector("article");
 let stuffList = document.createElement("ul");
 
-// forEach() array method
-stuff.forEach((item) => {
+// map() array method
+const stuffItem = stuff.map((item) => {
   let listItem = document.createElement("li");
   listItem.innerHTML = item;
-  stuffList.append(listItem);
+  return listItem;
 });
+console.log(stuff);
+console.log(stuffItem);
 
-article.append(stuffList)
+article.append(stuffList);
