@@ -57,3 +57,31 @@ const content = `
       }</span></li>
     </ul>  
 `;
+// Helper function: creates figure with image and caption
+const createFigure = function () {
+  const figure = document.createElement("figure");
+  const img = document.createElement("img");
+  img.src = frogpack.image;
+  img.alt = frogpack.name;
+  figure.appendChild(img);
+
+  const figcaption = document.createElement("figcaption");
+  figcaption.textContent = frogpack.name + " image";
+  figure.appendChild(figcaption);
+
+  return figure; // return figure to be used in main function
+};
+
+// Main function: creates article and populates content
+const mainFunc = function () {
+  const article = document.createElement("article");
+  article.innerHTML = content;
+
+  const figure = createFigure(); // call helper function
+  article.prepend(figure); // add figure at the start of article
+
+  return article; // return article element to where function is called
+};
+
+// Example usage: append article to main
+document.querySelector("main").appendChild(mainFunc());

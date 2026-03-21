@@ -25,4 +25,11 @@ const greenPack = {
   },
 };
 
+function change(classs) {
+  document.querySelector("main").className = classs;
+  document.querySelector(".dark-theme").style.backgroundColor = "black";
+}
+change("dark-theme");
+console.log(document.querySelector(".dark-theme"));
+
 console.log(greenPack.newVolume(5));
