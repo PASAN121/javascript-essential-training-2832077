@@ -22,3 +22,8 @@ body {
   height: 6rem;
   background-color: hsl(0, 0%, 90%);
 }
+
+.cell-active {
+  background-color: red;
+  transition: 0.3s ease;
+}
